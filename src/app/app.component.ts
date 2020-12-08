@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   password = '';
 
-  onButtonClick() {
+  onButtonClick(): any {
     this.password = 'My Password!!!';
   }
 }
