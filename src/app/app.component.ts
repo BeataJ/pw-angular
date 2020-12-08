@@ -24,7 +24,9 @@ export class AppComponent {
   }
 
   onButtonClick(): any {
-    console.log(this.includeSymbols);
+    console.log(
+      ` ${this.includeLetters}  ${this.includeNumbers} ${this.includeSymbols}`
+    );
     this.password = 'My Password!!!';
   }
 }
