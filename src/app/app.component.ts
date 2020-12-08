@@ -9,12 +9,12 @@ export class AppComponent {
   password = '';
   includeLetters = false;
 
-  onButtonClick(): any {
-    this.password = 'My Password!!!';
+  onChangeUseLetters(): any {
+    this.includeLetters = !this.includeLetters;
   }
 
-  onChangeUseLetters(): any {
+  onButtonClick(): any {
     console.log(this.includeLetters);
-    this.includeLetters = !this.includeLetters;
+    this.password = 'My Password!!!';
   }
 }
