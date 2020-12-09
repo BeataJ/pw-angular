@@ -48,5 +48,12 @@ export class AppComponent {
     if (this.includeSymbols) {
       validChars += symboles;
     }
+
+    let generatedPassword = '';
+    for (let i = 0; i < this.length; i++) {
+      const index = Math.floor(Math.random() * validChars.length);
+
+      generatedPassword += validChars[index];
+    }
   }
 }
