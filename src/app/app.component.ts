@@ -14,6 +14,7 @@ export class AppComponent {
   includeSymbols = false;
 
   onChangeLength(value: string): any {
+    // tslint:disable-next-line:radix
     const parsedValue = parseInt(value);
 
     if (!isNaN(parsedValue)) {
@@ -50,6 +51,7 @@ export class AppComponent {
     }
 
     let generatedPassword = '';
+    // tslint:disable-next-line:prefer-for-of
     for (let i = 0; i < this.length; i++) {
       const index = Math.floor(Math.random() * validChars.length);
 
