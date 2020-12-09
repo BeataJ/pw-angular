@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { stringify } from 'querystring';
 
 @Component({
   selector: 'app-root',
@@ -33,9 +34,19 @@ export class AppComponent {
   }
 
   onButtonClick(): any {
-    console.log(
-      ` ${this.includeLetters}  ${this.includeNumbers} ${this.includeSymbols}`
-    );
-    this.password = 'My Password!!!';
+    const numbers = '1234567890';
+    const letters = 'abcdefghijklmnoprstuvwyz';
+    const symboles = '!@#$%^&*()';
+
+    let validChars = '';
+    if (this.includeLetters) {
+      validChars += letters;
+    }
+    if (this.includeNumbers) {
+      validChars += numbers;
+    }
+    if (this.includeSymbols) {
+      validChars += symboles;
+    }
   }
 }
