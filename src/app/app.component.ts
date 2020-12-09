@@ -55,5 +55,7 @@ export class AppComponent {
 
       generatedPassword += validChars[index];
     }
+
+    this.password = generatedPassword;
   }
 }
